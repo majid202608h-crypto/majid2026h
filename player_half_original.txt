@@ -1,0 +1,147 @@
+        @Composable
+        fun PlayerHalf(
+            player: com.example.ui.DuelPlayerState,
+            playerNum: Int,
+            isFlipped: Boolean,
+            accentColor: Color,
+            modifierWeight: Modifier = Modifier,
+            timeLeft: Int,
+            avatarEmoji: String,
+            showGameplayElements: Boolean
+        ) {
+            var input by remember { mutableStateOf("") }
+            LaunchedEffect(player.a, player.b) { input = "" }
+
+            val rotation = if (isFlipped) 180f else 0f
+
+            Box(
+                modifier = modifierWeight
+                    .fillMaxWidth()
+                    .padding(12.dp)
+                    .graphicsLayer { rotationZ = rotation }
+            ) {
+                Column(Modifier.fillMaxSize()) {
+                    // Header: Avatar, Name, Score, Timer
+                    Row(
+                        Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Box(
+                                Modifier.size(48.dp).background(Color.White.copy(alpha = 0.15f), CircleShape).border(2.dp, Color.White, CircleShape),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Text(avatarEmoji, fontSize = 26.sp)
+                            }
+                            Spacer(Modifier.width(12.dp))
+                            Column {
+                                Text(player.name, fontSize = 20.sp, fontWeight = FontWeight.Black, color = Color.White)
+                                Text(
+                                    "⏱ ${with(viewModel) { timeLeft.toFa() }}",
+                                    fontSize = 24.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = if (showGameplayElements) Color(0xFFFFD54F) else Color.Transparent
+                                )
+                            }
+                        }
+                        
+                        // Score
+                        Box(
+                            Modifier.background(Color.Black.copy(alpha = 0.4f), RoundedCornerShape(12.dp))
+                                .padding(horizontal = 12.dp, vertical = 6.dp)
+                        ) {
+                            Text("🏆 ${with(viewModel) { player.score.toFa() }}", fontSize = 20.sp, fontWeight = FontWeight.Black, color = Color(0xFFFBBF24))
+                        }
+                    }
+
+                    Spacer(Modifier.height(16.dp))
+
+                    // Question
+                    Box(Modifier.fillMaxWidth().weight(0.35f), contentAlignment = Alignment.Center) {
+                        if (showGameplayElements) {
+                            CompositionLocalProvider(androidx.compose.ui.platform.LocalLayoutDirection provides androidx.compose.ui.unit.LayoutDirection.Ltr) {
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Text(with(viewModel) { player.a.toFa() }, fontSize = 52.sp, fontWeight = FontWeight.Black, color = Color.White)
+                                Text(" × ", fontSize = 40.sp, color = Color.White.copy(alpha = 0.7f), fontWeight = FontWeight.Bold)
+                                Text(with(viewModel) { player.b.toFa() }, fontSize = 52.sp, fontWeight = FontWeight.Black, color = Color.White)
+                                Text(" = ", fontSize = 40.sp, color = Color.White.copy(alpha = 0.7f), fontWeight = FontWeight.Bold)
+                                AnimatedContent(
+                                    targetState = if (input.isEmpty()) "?" else input,
+                                    transitionSpec = {
+                                        (scaleIn(initialScale = 0.5f) + fadeIn(tween(200))) togetherWith (scaleOut(targetScale = 1.5f) + fadeOut(tween(200)))
+                                    },
+                                    label = "answerAnim"
+                                ) { text ->
+                                    val faText = if (text == "?") "?" else with(viewModel) { text.toIntOrNull()?.toFa() ?: text }
+                                    Text(
+                                        text = faText,
+                                        fontSize = 56.sp,
+                                        fontWeight = FontWeight.Black,
+                                        color = if (text == "?") accentColor else Color(0xFFFFD700) // Gold color for answer
+                                    )
+                                }
+                            }
+                            }
+                        }
+                    }
+
+                    Spacer(Modifier.height(16.dp))
+
+                    // Keypad
+                    Box(Modifier.fillMaxWidth().weight(0.65f)) {
+                        if (showGameplayElements) {
+                            NumericKeypad(
+                                currentValue = input,
+                                onNumberPressed = { num -> if (input.length < 3) input += num.toString() },
+                                onDelete = { if (input.isNotEmpty()) input = input.dropLast(1) },
+                                onSubmit = { 
+                                    if (!player.answered) {
+                                        input.toIntOrNull()?.let { 
+                                            viewModel.submitDuelAnswer(playerNum, it)
+                                        } 
+                                    }
+                                },
+                                enabled = !player.answered,
+                                accentColor = accentColor,
+                                modifier = Modifier.fillMaxSize(),
+                                onPlayClickSound = { viewModel.triggerSound(com.example.ui.GameSoundEvent.PlayDuelClick) }
+                            )
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+        val insets = androidx.compose.foundation.layout.WindowInsets.safeDrawing.asPaddingValues()
+        val bottomInset = insets.calculateBottomPadding()
+        val topInset = insets.calculateTopPadding()
+        val maxInset = androidx.compose.ui.unit.max(bottomInset, topInset).coerceAtLeast(16.dp)
+        
+        Column(Modifier.fillMaxSize().padding(top = maxInset, bottom = maxInset)) {
+            // Top Half (Player 2, Flipped)
+            PlayerHalf(
+                player = state.player2, playerNum = 2, isFlipped = true,
+                accentColor = Color(0xFF10B981), // Emerald Green
+                modifierWeight = Modifier.weight(1f),
+                timeLeft = state.secondsLeft,
+                avatarEmoji = avatar2,
+                showGameplayElements = countdownFinished
+            )
+
+            // Splitter
+            Spacer(Modifier.height(8.dp))
+            Box(Modifier.fillMaxWidth().height(2.dp).background(Brush.horizontalGradient(listOf(Color.Transparent, Color.White.copy(alpha=0.3f), Color.Transparent))))
+            Spacer(Modifier.height(8.dp))
+
+            // Bottom Half (Player 1, Normal)
+            PlayerHalf(
+                player = state.player1, playerNum = 1, isFlipped = false,
+                accentColor = Color(0xFF3B82F6), // Blue
+                modifierWeight = Modifier.weight(1f),
+                timeLeft = state.secondsLeft,
+                avatarEmoji = avatar1,
+                showGameplayElements = countdownFinished
+            )
+        }

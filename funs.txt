@@ -1,0 +1,30 @@
+86:fun scheduleDailyReminderAlarm(context: Context) {
+146:    override fun onCreate(savedInstanceState: Bundle?) {
+214:    override fun onDestroy() {
+225:    override fun onWindowFocusChanged(hasFocus: Boolean) {
+232:    private fun hideSystemUI() {
+244:fun ParticleOverlay(particlesList: List<UIParticle>, triggerTick: Long) {
+269:fun MultiplicationAppContent(viewModel: GameViewModel) {
+757:fun DailyRewardOverlay(coinsReward: Int, onDismiss: () -> Unit, themeConfig: GameTheme) {
+832:fun AchievementUnlockedOverlay(achievement: GameAchievement, onDismiss: () -> Unit, themeConfig: GameTheme) {
+916:fun MainMenuScreen(
+1248:fun WorldMapScreen(
+1437:fun GameplayScreen(viewModel: GameViewModel, themeConfig: GameTheme) {
+1743:fun StageResultScreen(viewModel: GameViewModel, themeConfig: GameTheme) {
+1931:fun SpeedChallengeScreen(viewModel: GameViewModel, themeConfig: GameTheme) {
+2175:fun ShopScreen(viewModel: GameViewModel, profile: UserProfileEntity?, themeConfig: GameTheme) {
+2389:fun AchievementsScreen(viewModel: GameViewModel, profile: UserProfileEntity?, themeConfig: GameTheme) {
+2465:fun ProgressReportScreen(
+2761:fun LearnTablesScreen(viewModel: GameViewModel, themeConfig: GameTheme) {
+2875:fun BottomNavigationWidget(currentScreen: GameScreen, onNavigate: (GameScreen) -> Unit, theme: GameTheme) {
+2952:fun formatLeftTime(millis: Long): String {
+2961:fun Int.toFa(): String {
+2968:fun String.toFa(): String {
+2975:fun String.toEn(): String {
+2985:fun GlassCard(
+3016:fun ThreeDButton(
+3078:fun LoginScreen(viewModel: GameViewModel, themeConfig: GameTheme) {
+3190:fun LuckyWheelScreen(viewModel: GameViewModel, themeConfig: GameTheme) {
+3497:fun LevelUpOverlay(level: Int, onDismiss: () -> Unit, themeConfig: GameTheme) {
+3576:fun SupportDialog(
+3904:fun LicenseBlockOverlay(

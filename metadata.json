@@ -1,0 +1,6 @@
+{
+  "name": "قهرمان جدول ضرب",
+  "description": "یک بازی آموزشی جذاب و تعاملی برای یادگیری و تمرین آسان جدول ضرب برای دانش‌آموزان ابتدایی.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

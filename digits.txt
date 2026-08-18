@@ -1,0 +1,990 @@
+import androidx.compose.material3.*
+    val targetHours = listOf(10, 15, 19)
+    val targetMinutes = listOf(0, 30, 30) // morning 10:00, noon/afternoon 15:30, evening 19:30
+    for (i in 0..2) {
+            1001 + i,
+            set(Calendar.SECOND, 0)
+                add(Calendar.DAY_OF_YEAR, 1)
+            toneGen = ToneGenerator(AudioManager.STREAM_MUSIC, 100)
+                            toneGen?.startTone(ToneGenerator.TONE_CDMA_PIP, 100)
+                            toneGen?.startTone(ToneGenerator.TONE_SUP_ERROR, 250)
+                            toneGen?.startTone(ToneGenerator.TONE_CDMA_ALERT_INCALL_LITE, 200)
+                            toneGen?.startTone(ToneGenerator.TONE_CDMA_PIP, 50)
+                            delay(80)
+                            toneGen?.startTone(ToneGenerator.TONE_CDMA_PIP, 80)
+                    textScaleX = 1.0f
+                    paint.alpha = (p.alpha * 255).toInt().coerceIn(0, 255)
+    var firstLaunchTime by remember { mutableStateOf(licensePrefs.getLong("first_launch_time", 0L)) }
+    var licenseExpiryTime by remember { mutableStateOf(licensePrefs.getLong("license_expiry_time", 0L)) }
+        if (firstLaunchTime == 0L) {
+    val lastBackTime = remember { mutableStateOf(0L) }
+            if (now - lastBackTime.value < 2000L) {
+        val rsaKey = "MIHNMA0GCSqGSIb3DQEBAQUAA4G7ADCBtwKBrwDHRnnGbNC8cSDKxFac+ZHOkpqoneXVzZolZLSrpRtzekWI5AcKK7Hk+J7lNsEyxsMbwkLlgBS8UOM8iK1PCCOpWWfEkCooZvvKrpeZ7nVIao07nk1ZvR5LbwhFWwDkk0ibnxjIH5liCH0ra0TtFUGW95Tm0HPbKoLq96KBHfUo1V+HlWv/pb5cAnoSZG0Q0qgmbgWngGeE0/Jwc9EHV5w6r5SEaiLytf0KX7SGjzkCAwEAAQ=="
+                            it.productId in listOf("sub_1month", "sub_3month", "sub_6month", "sub_1year")
+                        "sub_1month" -> 30
+                        "sub_3month" -> 90
+                        "sub_6month" -> 180
+                        "sub_1year" -> 365
+                        else -> 30
+                    val durationMs = days * 24L * 60L * 60L * 1000L
+                    val currentExp = licensePrefs.getLong("license_expiry_time", 0L)
+            } else if (licenseExpiryTime > 0L) {
+                (licenseExpiryTime - System.currentTimeMillis()).coerceAtLeast(0L)
+                val trialDurationMs = 3L * 24L * 60L * 60L * 1000L
+                (trialDurationMs - elapsed).coerceAtLeast(0L)
+                kotlinx.coroutines.delay(10000)
+                val left = if (licenseExpiryTime > 0L) {
+                    val trialDurationMs = 3L * 24L * 60L * 60L * 1000L
+                remainingTimeMillis = left.coerceAtLeast(0L)
+            remainingTimeMillis <= 0L
+        if (trimmed == "SMH1361" || trimmed == "HA3998" || trimmed == "M_H_7399" || trimmed == "3998335" || trimmed == "1361" || trimmed == "HASANI_D_1405") {
+            licenseExpiryTime = 0L
+            editor.putLong("license_expiry_time", 0L)
+        } else if (trimmed == "ZARBDAR_M1" || trimmed == "M1_30D") {
+            licenseExpiryTime = baseTime + 30L * 24L * 60L * 60L * 1000L
+        } else if (trimmed == "PERM_M1") {
+            licenseExpiryTime = 0L
+            editor.putLong("license_expiry_time", 0L)
+        } else if (trimmed == "ZARBDAR_M3" || trimmed == "M3_90D") {
+            licenseExpiryTime = baseTime + 90L * 24L * 60L * 60L * 1000L
+        } else if (trimmed == "PERM_M3") {
+            licenseExpiryTime = 0L
+            editor.putLong("license_expiry_time", 0L)
+        } else if (trimmed == "ZARBDAR_M6" || trimmed == "M6_180D") {
+            licenseExpiryTime = baseTime + 180L * 24L * 60L * 60L * 1000L
+        } else if (trimmed == "PERM_M6") {
+            licenseExpiryTime = 0L
+            editor.putLong("license_expiry_time", 0L)
+        } else if (trimmed == "ZARBDAR_Y1" || trimmed == "Y1_365D") {
+            licenseExpiryTime = baseTime + 365L * 24L * 60L * 60L * 1000L
+        } else if (trimmed == "PERM_Y1") {
+            licenseExpiryTime = 0L
+            editor.putLong("license_expiry_time", 0L)
+    val baseTheme = GameConfig.THEMES.firstOrNull { it.id == activeThemeId } ?: GameConfig.THEMES[0]
+                "ocean" -> Color(0xFFE0F2FE) // Elegant sky blue
+                "forest" -> Color(0xFFDCFCE7) // Minty green
+                "sunset" -> Color(0xFFFCE7F3) // Cute Rose Pink
+                else -> Color(0xFFF3E8FF) // Dreamy Lavender
+                "ocean" -> Color(0xFFBAE6FD) // Light Azure Blue
+                "forest" -> Color(0xFFBBF7D0) // Pastel Leaf Green
+                "sunset" -> Color(0xFFFBCFE8) // Warm Tulip Pink
+                else -> Color(0xFFE9D5FF) // Light Amethyst Purple
+                "ocean" -> Color(0xFFF0F9FF)
+                "forest" -> Color(0xFFF0FDF4)
+                "sunset" -> Color(0xFFFFF5F7)
+                else -> Color(0xFFFAF5FF)
+    var particleTriggerTick by remember { androidx.compose.runtime.mutableStateOf(0L) }
+                    repeat(32) {
+                                x = (0..(screenWidthPx.toInt().coerceAtLeast(100))).random().toFloat(),
+                                y = (screenHeightPx * 0.15f).toInt().coerceAtLeast(50).let { startY ->
+                                    (startY..(startY + 150)).random().toFloat()
+                                vx = (-12..12).random().toFloat(),
+                                vy = (-18..-2).random().toFloat(),
+                                alpha = 1.0f,
+                                size = (26..46).random().toFloat(),
+                        p.vy += 0.45f // gravity
+                        p.alpha -= 0.018f
+                        if (p.alpha <= 0f) {
+                            .padding(vertical = 4.dp),
+                            color = if (isDarkMode) Color.White.copy(alpha = 0.55f) else Color(0xFF475569).copy(alpha = 0.8f),
+                            fontSize = 11.sp,
+                        color = themeConfig.primaryColor.copy(alpha = 0.05f),
+                        radius = 350.dp.toPx(),
+                        center = Offset(size.width * 0.2f, size.height * 0.3f)
+                        color = Color.Yellow.copy(alpha = 0.03f),
+                        radius = 280.dp.toPx(),
+                        center = Offset(size.width * 0.8f, size.height * 0.7f)
+            .background(Color.Black.copy(alpha = 0.75f))
+                .fillMaxWidth(0.85f)
+                .shadow(24.dp, RoundedCornerShape(24.dp)),
+            shape = RoundedCornerShape(24.dp),
+                    .padding(24.dp),
+                    fontSize = 52.sp,
+                    modifier = Modifier.padding(bottom = 12.dp)
+                    fontSize = 22.sp,
+                    modifier = Modifier.padding(bottom = 8.dp)
+                    fontSize = 14.sp,
+                    lineHeight = 20.sp,
+                    modifier = Modifier.padding(bottom = 20.dp)
+                        .background(Color.White.copy(alpha = 0.05f), RoundedCornerShape(12.dp))
+                        .padding(12.dp),
+                        fontSize = 24.sp,
+                        modifier = Modifier.padding(end = 6.dp)
+                        color = Color(0xFFFFD700),
+                        fontSize = 18.sp,
+                Spacer(modifier = Modifier.height(24.dp))
+                    Text("دمت گرم! دشت کردم 🪙", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+            .background(Color.Black.copy(alpha = 0.75f))
+                .fillMaxWidth(0.85f)
+                .shadow(24.dp, RoundedCornerShape(24.dp)),
+            shape = RoundedCornerShape(24.dp),
+                    .padding(24.dp),
+                    fontSize = 58.sp,
+                    modifier = Modifier.padding(bottom = 12.dp)
+                    color = Color(0xFFFFD700),
+                    fontSize = 20.sp,
+                    modifier = Modifier.padding(bottom = 8.dp)
+                    fontSize = 18.sp,
+                    modifier = Modifier.padding(bottom = 4.dp)
+                    fontSize = 13.sp,
+                    modifier = Modifier.padding(bottom = 18.dp)
+                        .background(Color.White.copy(alpha = 0.05f), RoundedCornerShape(12.dp))
+                        .padding(12.dp),
+                        fontSize = 13.sp,
+                        modifier = Modifier.padding(end = 4.dp)
+                        color = Color(0xFFFFD700),
+                        fontSize = 15.sp,
+                Spacer(modifier = Modifier.height(24.dp))
+// ─── SCREEN 1: MAIN MENU SCREEN ───
+    val coinLabel = (profile?.coins ?: 50).toFa()
+    val gemLabel = (profile?.gems ?: 0).toFa()
+    val bestSpeed = (profile?.bestSpeed ?: 0).toFa()
+    val txtColor = if (isWhiteCard) Color(0xFF0F172A) else Color.White
+    val subTxtColor = if (isWhiteCard) Color(0xFF475569) else Color.LightGray
+            .padding(horizontal = 16.dp, vertical = 6.dp),
+                .padding(vertical = 4.dp),
+                    .background(themeConfig.cardBg, RoundedCornerShape(50.dp))
+                    .border(1.dp, themeConfig.primaryColor.copy(alpha = 0.2f), RoundedCornerShape(50.dp))
+                    .padding(horizontal = 8.dp, vertical = 6.dp)
+                    fontSize = 20.sp, 
+                        .background(Color.White.copy(alpha = 0.1f), CircleShape)
+                        .padding(2.dp)
+                Spacer(modifier = Modifier.width(6.dp))
+                    fontSize = 12.sp
+                verticalArrangement = Arrangement.spacedBy(6.dp)
+                Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                            .background(themeConfig.cardBg, RoundedCornerShape(50.dp))
+                            .border(1.dp, Color(0xFFFFD700).copy(alpha = 0.3f), RoundedCornerShape(50.dp))
+                            .padding(horizontal = 10.dp, vertical = 4.dp),
+                        Text(coinLabel, color = Color(0xFFFFD700), fontWeight = FontWeight.Black, fontSize = 12.sp, modifier = Modifier.padding(end = 4.dp))
+                        Text("🪙", fontSize = 12.sp)
+                            .background(themeConfig.cardBg, RoundedCornerShape(50.dp))
+                            .border(1.dp, Color(0xFFC084FC).copy(alpha = 0.3f), RoundedCornerShape(50.dp))
+                            .padding(horizontal = 10.dp, vertical = 4.dp),
+                        Text(gemLabel, color = Color(0xFFC084FC), fontWeight = FontWeight.Black, fontSize = 12.sp, modifier = Modifier.padding(end = 4.dp))
+                        Text("💎", fontSize = 12.sp)
+                Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                            containerColor = if (isDailyClickable) Color(0xFFFFD700).copy(alpha = 0.2f) else themeConfig.cardBg
+                            .size(34.dp)
+                                1.dp,
+                                if (isDailyClickable) Color(0xFFFFD700) else themeConfig.primaryColor.copy(alpha = 0.2f),
+                        elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
+                            Text(text = if (isDailyClickable) "🎁" else "📦", fontSize = 14.sp)
+                            .size(34.dp)
+                            .border(1.dp, themeConfig.primaryColor.copy(alpha = 0.2f), CircleShape),
+                        elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
+                            Text(text = if (isDarkMode) "☀️" else "🌙", fontSize = 14.sp)
+        Spacer(modifier = Modifier.height(14.dp))
+            fontSize = 21.sp,
+            fontSize = 11.sp,
+            color = subTxtColor.copy(alpha = 0.7f),
+            modifier = Modifier.padding(top = 2.dp)
+        Spacer(modifier = Modifier.height(8.dp))
+            shape = RoundedCornerShape(50.dp),
+                .fillMaxWidth(0.85f)
+                .height(48.dp)
+                .shadow(6.dp, CircleShape)
+                    modifier = Modifier.size(20.dp)
+                Spacer(modifier = Modifier.width(6.dp))
+                Text("شروع بازی روی نقشه! 🗺", color = Color.White, fontWeight = FontWeight.Black, fontSize = 14.sp)
+        Spacer(modifier = Modifier.height(10.dp))
+                if (licenseExpiryTime > 0L) {
+                    if (remainingTimeMs <= 0L) {
+                    if (remainingTimeMs <= 0L) {
+        androidx.compose.material3.Surface(
+            color = if (permanentLicensed) Color(0xFF10B981).copy(alpha = 0.1f) else themeConfig.primaryColor.copy(alpha = 0.08f),
+            contentColor = if (permanentLicensed) Color(0xFF10B981) else themeConfig.primaryColor,
+            border = BorderStroke(1.dp, if (permanentLicensed) Color(0xFF10B981).copy(alpha = 0.25f) else themeConfig.primaryColor.copy(alpha = 0.15f)),
+            shape = RoundedCornerShape(10.dp)
+                modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
+                    fontSize = 11.sp,
+        Spacer(modifier = Modifier.height(12.dp))
+            horizontalArrangement = Arrangement.spacedBy(10.dp)
+                    .weight(1f)
+                    .height(84.dp),
+                shape = RoundedCornerShape(14.dp)
+                        .padding(8.dp),
+                    Text("🗺", fontSize = 22.sp)
+                    Spacer(modifier = Modifier.height(2.dp))
+                    Text("مراحل نقشه", color = txtColor, fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                    Text("سفر گام‌به‌گام", color = subTxtColor, fontSize = 9.sp)
+                    .weight(1f)
+                    .height(84.dp),
+                shape = RoundedCornerShape(14.dp)
+                        .padding(8.dp),
+                    Text("⚡", fontSize = 22.sp)
+                    Spacer(modifier = Modifier.height(2.dp))
+                    Text("چالش سرعت", color = txtColor, fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                    Text("رکورد: $bestSpeed ثانیه", color = subTxtColor, fontSize = 9.sp)
+        Spacer(modifier = Modifier.height(10.dp))
+            horizontalArrangement = Arrangement.spacedBy(10.dp)
+                    .weight(1f)
+                    .height(84.dp),
+                shape = RoundedCornerShape(14.dp)
+                        .padding(8.dp),
+                    Text("🏪", fontSize = 21.sp)
+                    Spacer(modifier = Modifier.height(2.dp))
+                    Text("فروشگاه جادویی", color = txtColor, fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                    Text("آواتار و رنگ‌آمیزی", color = subTxtColor, fontSize = 9.sp)
+                    .weight(1f)
+                    .height(84.dp),
+                shape = RoundedCornerShape(14.dp)
+                        .padding(8.dp),
+                    Text("📖", fontSize = 21.sp)
+                    Spacer(modifier = Modifier.height(2.dp))
+                    Text("کلاس یادگیری", color = txtColor, fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                    Text("مرور و تمرین خانه", color = subTxtColor, fontSize = 9.sp)
+        Spacer(modifier = Modifier.height(14.dp))
+            colors = ButtonDefaults.buttonColors(containerColor = if (isWhiteCard) Color(0xFFF1F5F9) else themeConfig.cardBg),
+            shape = RoundedCornerShape(50.dp),
+                .fillMaxWidth(0.85f)
+                .height(44.dp)
+                .border(1.dp, themeConfig.primaryColor.copy(alpha = 0.35f), RoundedCornerShape(50.dp)),
+            elevation = ButtonDefaults.buttonElevation(defaultElevation = 1.dp)
+                Text("📞", fontSize = 14.sp)
+                Spacer(modifier = Modifier.width(6.dp))
+                Text("ثبت نام مدارس و پشتیبانی بازی", color = themeConfig.primaryColor, fontWeight = FontWeight.ExtraBold, fontSize = 12.sp)
+// ─── SCREEN 2: WORLD MAP SCREEN ───
+    val totalCoins = (profile?.coins ?: 50).toFa()
+            .padding(horizontal = 16.dp)
+                .padding(vertical = 12.dp),
+                color = if (isWhiteCard) Color(0xFF0F172A) else Color.White,
+                fontSize = 18.sp,
+                    .background(themeConfig.cardBg, RoundedCornerShape(50.dp))
+                    .padding(horizontal = 12.dp, vertical = 6.dp),
+                Text("🪙", modifier = Modifier.padding(end = 4.dp))
+                Text(totalCoins, color = Color(0xFFFFD700), fontWeight = FontWeight.Bold)
+        val unlockedStage = profile?.unlockedStage ?: 0
+            if (unlockedStage > 1) {
+                    mapListState.scrollToItem((unlockedStage - 1).coerceAtLeast(0))
+                .weight(1f),
+            verticalArrangement = Arrangement.spacedBy(8.dp),
+            contentPadding = PaddingValues(bottom = 24.dp)
+                // Sequential Unlocking: Stage is unlocked if it's the very first stage (id = 0) or the previous stage has been unlocked with > 0 stars
+                val isUnlocked = stage.id == 0 || (stageStars[stage.id - 1] ?: 0) > 0
+                val starsGained = stageStars[stage.id] ?: 0
+                    if (stage.id > 0) {
+                                .width(3.dp)
+                                .height(30.dp)
+                                            if (isUnlocked) themeConfig.primaryColor else Color.Gray.copy(alpha = 0.3f),
+                                            if (isUnlocked) themeConfig.primaryColor else Color.Gray.copy(alpha = 0.3f)
+                            .fillMaxWidth(0.9f)
+                            .shadow(if (isUnlocked) 8.dp else 0.dp, RoundedCornerShape(18.dp))
+                                1.5.dp,
+                                if (stage.boss) Color(0xFFFF6348).copy(alpha = 0.5f) else Color.Transparent,
+                                RoundedCornerShape(18.dp)
+                            containerColor = if (isUnlocked) themeConfig.cardBg else themeConfig.cardBg.copy(alpha = 0.4f)
+                        shape = RoundedCornerShape(18.dp),
+                                .padding(16.dp),
+                                fontSize = 36.sp,
+                                modifier = Modifier.padding(end = 12.dp)
+                            Column(modifier = Modifier.weight(1f)) {
+                                        fontSize = 16.sp,
+                                        color = if (isUnlocked) (if (isWhiteCard) Color(0xFF0F172A) else Color.White) else Color.Gray
+                                                .padding(start = 8.dp)
+                                                .background(Color(0xFFFF6348), RoundedCornerShape(4.dp))
+                                                .padding(horizontal = 6.dp, vertical = 2.dp)
+                                            Text("باس 🐲", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 9.sp)
+                                    fontSize = 12.sp,
+                                    color = if (isUnlocked) (if (isWhiteCard) Color(0xFF475569) else Color.LightGray) else Color.Gray
+                                    Row(modifier = Modifier.padding(top = 4.dp)) {
+                                        repeat(3) { index ->
+                                                fontSize = 16.sp,
+                                                color = Color(0xFFFFD700)
+                                    modifier = Modifier.size(24.dp)
+                                    modifier = Modifier.size(24.dp)
+// ─── SCREEN 3: GAMEPLAY SCREEN ───
+            // However, to keep it 100% matched, we can reconstruct list from Viewmodel states
+        val random = kotlin.random.Random(state.stageId.toLong() + 45L)
+        for (i in 0..30) {
+            list.add(Pair(factors.random(random), (1..9).random(random)))
+            .padding(16.dp),
+                repeat(3) { index ->
+                        fontSize = 20.sp,
+                            .padding(end = 4.dp)
+                            .alpha(if (index < state.lives) 1.0f else 0.25f)
+                    .background(themeConfig.cardBg, RoundedCornerShape(50.dp))
+                    .padding(horizontal = 12.dp, vertical = 6.dp),
+                Text("⭐", modifier = Modifier.padding(end = 4.dp))
+                Text(state.score.toFa(), fontWeight = FontWeight.Black, color = Color(0xFFFFD700))
+                colors = ButtonDefaults.buttonColors(containerColor = Color.Red.copy(alpha = 0.2f)),
+                contentPadding = PaddingValues(horizontal = 14.dp, vertical = 4.dp),
+                modifier = Modifier.height(28.dp),
+                shape = RoundedCornerShape(50.dp)
+                Text("خروج 🚪", color = Color.Red, fontSize = 11.sp, fontWeight = FontWeight.Bold)
+        Spacer(modifier = Modifier.height(10.dp))
+            animationSpec = androidx.compose.animation.core.tween(durationMillis = 50, easing = androidx.compose.animation.core.LinearEasing),
+                .height(8.dp)
+                .clip(RoundedCornerShape(4.dp)),
+            color = if (animatedProgress < 0.3f) Color.Red else themeConfig.primaryColor,
+            trackColor = Color.White.copy(alpha = 0.08f)
+        Spacer(modifier = Modifier.height(12.dp))
+                    Text("🐲 سلامتیِ غول ریاضی:", color = Color(0xFFFF6348), fontSize = 11.sp, fontWeight = FontWeight.Bold)
+                    Text("${state.bossHp.toFa()} / ${totalQ.toFa()}", color = Color.White, fontSize = 11.sp)
+                Spacer(modifier = Modifier.height(4.dp))
+                        .height(10.dp)
+                        .clip(RoundedCornerShape(5.dp)),
+                    color = Color(0xFFFF6348),
+                    trackColor = Color.White.copy(alpha = 0.08f)
+            Spacer(modifier = Modifier.height(10.dp))
+                .padding(vertical = 4.dp),
+                fontSize = 46.sp,
+                modifier = Modifier.padding(bottom = 8.dp)
+            Spacer(modifier = Modifier.width(10.dp))
+                    .background(themeConfig.cardBg, RoundedCornerShape(14.dp, 14.dp, 14.dp, 0.dp))
+                    .border(1.dp, themeConfig.primaryColor.copy(alpha = 0.3f), RoundedCornerShape(14.dp, 14.dp, 14.dp, 0.dp))
+                    .padding(horizontal = 14.dp, vertical = 8.dp)
+                    color = if (isLight) Color(0xFF0F172A) else Color.White,
+                    fontSize = 12.sp,
+                    lineHeight = 16.sp,
+        Spacer(modifier = Modifier.height(12.dp))
+                .shadow(12.dp, RoundedCornerShape(24.dp)),
+            shape = RoundedCornerShape(24.dp)
+                    .padding(vertical = 24.dp, horizontal = 12.dp),
+                        .background(if (isLight) Color(0xFFF1F5F9) else Color.White.copy(alpha = 0.05f), RoundedCornerShape(50.dp))
+                        .padding(horizontal = 14.dp, vertical = 4.dp)
+                    val qNum = (state.currentQuestionIndex + 1).toFa()
+                        color = if (isLight) Color(0xFF475569) else Color.LightGray,
+                        fontSize = 11.sp,
+                Spacer(modifier = Modifier.height(16.dp))
+                            color = Color(0xFF00D2D3),
+                            fontSize = 58.sp,
+                            color = Color(0xFFFF6D81),
+                            fontSize = 38.sp,
+                            modifier = Modifier.padding(horizontal = 12.dp)
+                            color = Color(0xFF00D2D3),
+                            fontSize = 58.sp,
+                            color = Color(0xFFFFD32A),
+                            fontSize = 38.sp,
+                            modifier = Modifier.padding(horizontal = 12.dp)
+                            color = Color(0xFFFFD32A),
+                            fontSize = 58.sp,
+        Spacer(modifier = Modifier.height(16.dp))
+        // Grid selection options (4 alternatives)
+            columns = GridCells.Fixed(2),
+            horizontalArrangement = Arrangement.spacedBy(10.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp)
+                    state.selectResult != null && isCorrectAnswer -> Color(0xFF2ED573) // Vivid Green
+                    state.selectResult != null && itemSelected && state.selectResult == AnswerResult.Wrong -> Color(0xFFEA2027) // Vivid Red
+                    else -> if (isLight) themeConfig.primaryColor.copy(alpha = 0.25f) else Color.White.copy(alpha = 0.15f)
+                    state.selectResult != null && isCorrectAnswer -> Color(0xFF2ED573) // Solid Vivid Green
+                    state.selectResult != null && itemSelected && state.selectResult == AnswerResult.Wrong -> Color(0xFFEA2027) // Solid Vivid Red
+                    else -> if (isLight) Color(0xFF0F172A) else Color.White
+                        .height(86.dp)
+                        .border(2.dp, borderCol, RoundedCornerShape(16.dp))
+                        .shadow(4.dp, RoundedCornerShape(16.dp)),
+                    shape = RoundedCornerShape(16.dp),
+                            fontSize = 28.sp,
+        Spacer(modifier = Modifier.weight(1f))
+// ─── SCREEN 4: STAGE RESULT SCREEN ───
+    val victory = state.lives > 0 && stateCompleted >= 0.4f
+        if (state.lives <= 0) 0 else {
+                stateCompleted == 1.0f -> 3
+                stateCompleted >= 0.7f -> 2
+                stateCompleted >= 0.4f -> 1
+                else -> 0
+    val earnedCoins = if (victory) stage.coinReward + (starsCount - 1) * 20 else 0
+            .padding(24.dp),
+                .shadow(16.dp, RoundedCornerShape(28.dp)),
+            shape = RoundedCornerShape(28.dp)
+                    .padding(28.dp),
+                    text = if (victory) (if (starsCount == 3) "🏆" else "⭐️") else "😢",
+                    fontSize = 72.sp,
+                    modifier = Modifier.padding(bottom = 8.dp)
+                    color = if (victory) Color(0xFFFFD32A) else Color.White,
+                    fontSize = 24.sp,
+                    modifier = Modifier.padding(bottom = 4.dp)
+                    fontSize = 12.sp,
+                    modifier = Modifier.padding(bottom = 20.dp)
+                Row(modifier = Modifier.padding(bottom = 24.dp)) {
+                    repeat(3) { index ->
+                            fontSize = 38.sp,
+                            color = Color(0xFFFFD700)
+                        .padding(bottom = 20.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                            .weight(1f)
+                            .background(Color.White.copy(alpha = 0.05f), RoundedCornerShape(12.dp))
+                            .padding(12.dp),
+                        Text(state.correctAnswersCount.toFa(), color = Color(0xFF2ED573), fontSize = 18.sp, fontWeight = FontWeight.Bold)
+                        Text("درست ✅", color = Color.LightGray, fontSize = 10.sp, modifier = Modifier.padding(top = 2.dp))
+                            .weight(1f)
+                            .background(Color.White.copy(alpha = 0.05f), RoundedCornerShape(12.dp))
+                            .padding(12.dp),
+                        Text(state.wrongAnswersCount.toFa(), color = Color.Red, fontSize = 18.sp, fontWeight = FontWeight.Bold)
+                        Text("اشتباه ❌", color = Color.LightGray, fontSize = 10.sp, modifier = Modifier.padding(top = 2.dp))
+                            .weight(1f)
+                            .background(Color.White.copy(alpha = 0.05f), RoundedCornerShape(12.dp))
+                            .padding(12.dp),
+                        Text(state.score.toFa(), color = Color(0xFFFFD700), fontSize = 18.sp, fontWeight = FontWeight.Bold)
+                        Text("امتیاز ⭐️", color = Color.LightGray, fontSize = 10.sp, modifier = Modifier.padding(top = 2.dp))
+                            .background(themeConfig.primaryColor.copy(alpha = 0.12f), RoundedCornerShape(16.dp))
+                            .padding(14.dp),
+                        Text("🪙", fontSize = 20.sp, modifier = Modifier.padding(end = 4.dp))
+                            color = Color(0xFFFFD700),
+                            fontSize = 14.sp,
+                        if (stage.gemReward > 0) {
+                            Text(" و +${stage.gemReward.toFa()} 💎", color = Color(0xFFC084FC), fontSize = 14.sp, fontWeight = FontWeight.Bold)
+                        fontSize = 11.sp,
+                        lineHeight = 16.sp
+                Spacer(modifier = Modifier.height(26.dp))
+                        val nextId = state.stageId + 1
+                    shape = RoundedCornerShape(50.dp),
+                        text = if (victory && (state.stageId + 1) < GameConfig.STAGES.size) "مرحله بعدی! 🚀" else "امتحان مجدد مرحله 🔄",
+                Spacer(modifier = Modifier.height(8.dp))
+                    border = BorderStroke(1.dp, Color.White.copy(alpha = 0.3f)),
+                    shape = RoundedCornerShape(50.dp),
+// ─── SCREEN 5: SPEED CHALLENGE SCREEN ───
+            .padding(16.dp),
+                    fontSize = 32.sp,
+                    color = if (state.secondsLeft < 10) Color.Red else Color(0xFFFFD32A),
+                Text("ثانیه باقی مانده", color = if (isLightMode) Color(0xFF475569) else Color.LightGray, fontSize = 9.sp)
+                    fontSize = 32.sp,
+                    color = if (isLightMode) Color(0xFF0F172A) else Color.White,
+                Text("امتیاز نهایی", color = if (isLightMode) Color(0xFF475569) else Color.LightGray, fontSize = 9.sp)
+                    fontSize = 24.sp,
+                    color = Color(0xFFFF6348),
+                Text("ضرب متوالی", color = if (isLightMode) Color(0xFF475569) else Color.LightGray, fontSize = 9.sp)
+        Spacer(modifier = Modifier.height(14.dp))
+            animationSpec = androidx.compose.animation.core.tween(durationMillis = 100, easing = androidx.compose.animation.core.LinearEasing),
+                .height(8.dp)
+                .clip(RoundedCornerShape(4.dp)),
+            color = if (state.secondsLeft < 10) Color.Red else Color(0xFF2ED573),
+            trackColor = Color.White.copy(alpha = 0.08f)
+        Spacer(modifier = Modifier.height(14.dp))
+                .padding(vertical = 4.dp),
+                fontSize = 46.sp,
+                modifier = Modifier.padding(bottom = 8.dp)
+            Spacer(modifier = Modifier.width(10.dp))
+                    .background(themeConfig.cardBg, RoundedCornerShape(14.dp, 14.dp, 14.dp, 0.dp))
+                    .border(1.dp, themeConfig.primaryColor.copy(alpha = 0.3f), RoundedCornerShape(14.dp, 14.dp, 14.dp, 0.dp))
+                    .padding(horizontal = 14.dp, vertical = 8.dp)
+                    color = if (isLightMode) Color(0xFF0F172A) else Color.White,
+                    fontSize = 12.sp,
+        Spacer(modifier = Modifier.height(18.dp))
+                .shadow(12.dp, RoundedCornerShape(24.dp)),
+            shape = RoundedCornerShape(24.dp)
+                    .padding(vertical = 32.dp),
+                            color = Color(0xFF00D2D3),
+                            fontSize = 62.sp,
+                            color = Color(0xFFFF6D81),
+                            fontSize = 38.sp,
+                            modifier = Modifier.padding(horizontal = 12.dp)
+                            color = Color(0xFF00D2D3),
+                            fontSize = 62.sp,
+                            color = Color(0xFFFFD32A),
+                            fontSize = 38.sp,
+                            modifier = Modifier.padding(horizontal = 12.dp)
+                            color = Color(0xFFFFD32A),
+                            fontSize = 62.sp,
+        Spacer(modifier = Modifier.height(18.dp))
+            columns = GridCells.Fixed(2),
+            horizontalArrangement = Arrangement.spacedBy(10.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp)
+                    state.isLocked && isCorrectVal -> Color(0xFF2ED573) // Solid Vivid Green
+                    state.isLocked && itemSelected && !isCorrectVal -> Color(0xFFEA2027) // Solid Vivid Red
+                    state.isLocked && isCorrectVal -> Color(0xFF2ED573)
+                    state.isLocked && itemSelected && !isCorrectVal -> Color(0xFFEA2027)
+                    else -> if (isLight) themeConfig.primaryColor.copy(alpha = 0.25f) else Color.White.copy(alpha = 0.15f)
+                    else -> if (isLight) Color(0xFF0F172A) else Color.White
+                        .height(86.dp)
+                        .border(2.dp, borderCol, RoundedCornerShape(16.dp))
+                        .shadow(4.dp, RoundedCornerShape(16.dp)),
+                    shape = RoundedCornerShape(16.dp),
+                            fontSize = 28.sp,
+        Spacer(modifier = Modifier.weight(1f))
+// ─── SCREEN 6: SHOP SCREEN ───
+    val totalCoins = profile?.coins ?: 50
+    val screenTitleColor = if (isLight) Color(0xFF0F172A) else Color.White
+    val itemTitleColor = if (isLight) Color(0xFF1E293B) else Color.White
+    val itemSubColor = if (isLight) Color(0xFF475569) else Color.LightGray
+            .padding(16.dp)
+                .padding(vertical = 4.dp),
+            Text("🏪 فروشگاه جادویی", color = screenTitleColor, fontSize = 21.sp, fontWeight = FontWeight.Bold)
+                    .background(themeConfig.cardBg, RoundedCornerShape(50.dp))
+                    .padding(horizontal = 12.dp, vertical = 6.dp),
+                Text("🪙", modifier = Modifier.padding(end = 4.dp))
+                Text(totalCoins.toFa(), color = Color(0xFFFFD700), fontWeight = FontWeight.Bold)
+                .weight(1f),
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+            contentPadding = PaddingValues(top = 12.dp, bottom = 48.dp)
+                Text("🦸 همیاران قهرمان (آواتارها)", color = themeConfig.primaryColor, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                Spacer(modifier = Modifier.height(8.dp))
+            items(GameConfig.AVATARS.chunked(2)) { pair ->
+                Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                                .weight(1f)
+                                .height(130.dp)
+                                    width = 1.5.dp,
+                                    shape = RoundedCornerShape(16.dp)
+                            shape = RoundedCornerShape(16.dp)
+                                    .padding(12.dp),
+                                Text(avatar.icon, fontSize = 38.sp)
+                                Spacer(modifier = Modifier.height(4.dp))
+                                Text(avatar.name, color = itemTitleColor, fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                                Spacer(modifier = Modifier.height(6.dp))
+                                    Text("فعال شده ✅", color = themeConfig.primaryColor, fontSize = 10.sp, fontWeight = FontWeight.Bold)
+                                    Text("کلیک برای انتخاب", color = Color(0xFF2ED573), fontSize = 10.sp)
+                                        Text("🪙", fontSize = 11.sp, modifier = Modifier.padding(end = 2.dp))
+                                        Text("${avatar.price.toFa()} سکه", color = Color(0xFFFFD700), fontSize = 11.sp, fontWeight = FontWeight.Bold)
+                Spacer(modifier = Modifier.height(8.dp))
+                Text("🎨 قالب‌های ظاهری بازی", color = themeConfig.primaryColor, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                Spacer(modifier = Modifier.height(8.dp))
+            items(GameConfig.THEMES.chunked(2)) { pair ->
+                Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                                .weight(1f)
+                                .height(120.dp)
+                                    width = 1.5.dp,
+                                    shape = RoundedCornerShape(16.dp)
+                            shape = RoundedCornerShape(16.dp)
+                                    .padding(12.dp),
+                                Text(gameTheme.preview, fontSize = 36.sp)
+                                Spacer(modifier = Modifier.height(4.dp))
+                                Text(gameTheme.name, color = itemTitleColor, fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                                Spacer(modifier = Modifier.height(6.dp))
+                                    Text("فعال شده ✅", color = themeConfig.primaryColor, fontSize = 10.sp, fontWeight = FontWeight.Bold)
+                                    Text("کلیک برای انتخاب", color = Color(0xFF2ED573), fontSize = 10.sp)
+                                        Text("🪙", fontSize = 11.sp, modifier = Modifier.padding(end = 2.dp))
+                                        Text("${gameTheme.price.toFa()} سکه", color = Color(0xFFFFD700), fontSize = 11.sp, fontWeight = FontWeight.Bold)
+                Spacer(modifier = Modifier.height(8.dp))
+                Text("✨ باران افکت‌های جادویی درست", color = themeConfig.primaryColor, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                Spacer(modifier = Modifier.height(8.dp))
+            items(GameConfig.EFFECTS.chunked(2)) { pair ->
+                Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                                .weight(1f)
+                                .height(120.dp)
+                                    width = 1.5.dp,
+                                    shape = RoundedCornerShape(16.dp)
+                            shape = RoundedCornerShape(16.dp)
+                                    .padding(12.dp),
+                                Text(effect.icon, fontSize = 36.sp)
+                                Spacer(modifier = Modifier.height(4.dp))
+                                Text(effect.name, color = itemTitleColor, fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                                Spacer(modifier = Modifier.height(6.dp))
+                                    Text("فعال شده ✅", color = themeConfig.primaryColor, fontSize = 10.sp, fontWeight = FontWeight.Bold)
+                                    Text("کلیک برای انتخاب", color = Color(0xFF2ED573), fontSize = 10.sp)
+                                        Text("🪙", fontSize = 11.sp, modifier = Modifier.padding(end = 2.dp))
+                                        Text("${effect.price.toFa()} سکه", color = Color(0xFFFFD700), fontSize = 11.sp, fontWeight = FontWeight.Bold)
+// ─── SCREEN 7: ACHIEVEMENTS SCREEN ───
+    val mainTitleColor = if (isLight) Color(0xFF0F172A) else Color.White
+    val achNameColor = if (isLight) Color(0xFF1E293B) else Color.White
+    val achDescColor = if (isLight) Color(0xFF475569) else Color.LightGray
+            .padding(16.dp)
+        Text("🏆 دستاوردهای من", color = mainTitleColor, fontSize = 21.sp, fontWeight = FontWeight.Bold, modifier = Modifier.padding(bottom = 12.dp))
+                .weight(1f),
+            verticalArrangement = Arrangement.spacedBy(10.dp),
+            contentPadding = PaddingValues(bottom = 40.dp)
+                        .alpha(if (isUnlocked) 1.0f else 0.5f)
+                            width = 1.dp,
+                            color = if (isUnlocked) Color(0xFFFFD700).copy(alpha = 0.4f) else Color.Transparent,
+                            shape = RoundedCornerShape(16.dp)
+                    shape = RoundedCornerShape(16.dp)
+                            .padding(16.dp),
+                        Text(ach.icon, fontSize = 34.sp, modifier = Modifier.padding(end = 12.dp))
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(ach.name, color = achNameColor, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                            Text(ach.desc, color = achDescColor, fontSize = 11.sp, modifier = Modifier.padding(top = 2.dp))
+                                    if (isUnlocked) Color(0xFFFFD700) else Color.White.copy(alpha = 0.1f),
+                                    RoundedCornerShape(20.dp)
+                                .padding(horizontal = 12.dp, vertical = 6.dp)
+                                fontSize = 10.sp
+// ─── SCREEN 8: PROGRESS REPORT SCREEN ───
+    val correctTotal = profile?.totalCorrect ?: 0
+    val wrongTotal = profile?.totalWrong ?: 0
+    val streakHigh = profile?.maxStreak ?: 0
+    val mainTitleColor = if (isLight) Color(0xFF0F172A) else Color.White
+    val textTitleColor = if (isLight) Color(0xFF1E293B) else Color.White
+    val subtitleColor = if (isLight) Color(0xFF475569) else Color.LightGray
+            .padding(16.dp)
+            modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp),
+            Text("📊 کارنامه پیشرفت ریاضی من", color = mainTitleColor, fontSize = 20.sp, fontWeight = FontWeight.Bold)
+                .padding(bottom = 12.dp)
+                .border(1.dp, themeConfig.primaryColor.copy(alpha = 0.25f), RoundedCornerShape(12.dp)),
+            shape = RoundedCornerShape(12.dp)
+                    .padding(horizontal = 14.dp, vertical = 10.dp),
+                    Text("👤", fontSize = 18.sp, modifier = Modifier.padding(end = 6.dp))
+                        fontSize = 13.sp
+                    fontSize = 11.sp
+            androidx.compose.material3.AlertDialog(
+                shape = RoundedCornerShape(20.dp),
+                        fontSize = 16.sp,
+                            fontSize = 12.sp,
+                        Spacer(modifier = Modifier.height(12.dp))
+                            placeholder = { Text("نام مستعار جدید...", color = subtitleColor.copy(alpha = 0.5f)) },
+                                unfocusedBorderColor = subtitleColor.copy(alpha = 0.3f)
+                            shape = RoundedCornerShape(10.dp)
+                    androidx.compose.material3.TextButton(
+                    androidx.compose.material3.TextButton(onClick = { showReportNameDialog = false }) {
+                .padding(bottom = 16.dp),
+            horizontalArrangement = Arrangement.spacedBy(10.dp)
+                modifier = Modifier.weight(1f),
+                shape = RoundedCornerShape(16.dp)
+                        .padding(12.dp),
+                    Text(correctTotal.toFa(), color = Color(0xFF2ED573), fontSize = 24.sp, fontWeight = FontWeight.Black)
+                    Text("پاسخ درست", color = subtitleColor, fontSize = 10.sp)
+                modifier = Modifier.weight(1f),
+                shape = RoundedCornerShape(16.dp)
+                        .padding(12.dp),
+                    Text(wrongTotal.toFa(), color = Color.Red, fontSize = 24.sp, fontWeight = FontWeight.Black)
+                    Text("پاسخ غلط", color = subtitleColor, fontSize = 10.sp)
+                modifier = Modifier.weight(1f),
+                shape = RoundedCornerShape(16.dp)
+                        .padding(12.dp),
+                    Text(streakHigh.toFa(), color = Color(0xFF00D2D3), fontSize = 24.sp, fontWeight = FontWeight.Black)
+                    Text("رکورد متوالی", color = subtitleColor, fontSize = 10.sp)
+        Spacer(modifier = Modifier.height(4.dp))
+        // List tables mapping stats (1 to 9 progress bars)
+                .weight(1f),
+            verticalArrangement = Arrangement.spacedBy(10.dp),
+            contentPadding = PaddingValues(bottom = 80.dp)
+            items(9) { numIdx ->
+                val num = numIdx + 1
+                val cor = stat?.correctCount ?: 0
+                val wrg = stat?.wrongCount ?: 0
+                val progressPct = if (total > 0) cor.toFloat() / total.toFloat() else 0.0f
+                    1, 2, 3 -> Color(0xFF2ED573)
+                    4, 5, 6 -> Color(0xFF00D2D3)
+                    7, 8 -> Color(0xFFFFD32A)
+                    else -> Color(0xFFC084FC)
+                    shape = RoundedCornerShape(16.dp)
+                            .padding(14.dp)
+                            Text("ضربدرِ عددِ ${num.toFa()}", color = textTitleColor, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                            Text("${(progressPct * 100).toInt().toFa()} درصد یادگیری", color = colorAccent, fontSize = 11.sp, fontWeight = FontWeight.Bold)
+                        Spacer(modifier = Modifier.height(8.dp))
+                                .height(8.dp)
+                                .clip(RoundedCornerShape(4.dp)),
+                            trackColor = if (isLight) Color(0xFFE2E8F0) else Color.White.copy(alpha = 0.08f)
+                        Spacer(modifier = Modifier.height(6.dp))
+                            fontSize = 10.sp
+                        .padding(vertical = 12.dp),
+                    border = BorderStroke(1.dp, themeConfig.primaryColor.copy(alpha = 0.25f)),
+                    shape = RoundedCornerShape(20.dp)
+                            .padding(16.dp),
+                        Text("🎨 طراح و توسعه‌دهنده بازی", color = themeConfig.primaryColor, fontSize = 11.sp, fontWeight = FontWeight.Bold)
+                        Spacer(modifier = Modifier.height(6.dp))
+                        Text("سید مجید حسینی", color = textTitleColor, fontSize = 18.sp, fontWeight = FontWeight.Black)
+                Spacer(modifier = Modifier.height(10.dp))
+                    border = BorderStroke(1.dp, Color.Red.copy(alpha = 0.4f)),
+                    shape = RoundedCornerShape(50.dp),
+                    Text("پاک کردن کارنامه و ریست بازی ⚠️", color = Color.Red, fontSize = 12.sp)
+// ─── SCREEN 9: LEARN TABLES SCREEN (9X9 GRID WITH VOICE) ───
+    var selectedRow by remember { mutableStateOf(1) }
+    val mainTitleColor = if (isLight) Color(0xFF0F172A) else Color.White
+    val subtitleColor = if (isLight) Color(0xFF475569) else Color.LightGray
+            .padding(16.dp)
+        Text("📖 کلاس یادگیری صوتی جدول ضرب", color = mainTitleColor, fontSize = 18.sp, fontWeight = FontWeight.Bold)
+        Text("روی هر خانه کلیک کن تا حاصل ضرب را بلند بشنوی 🔊", color = subtitleColor, fontSize = 11.sp, modifier = Modifier.padding(top = 2.dp, bottom = 12.dp))
+                .padding(vertical = 4.dp),
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
+            for (r in 1..9) {
+                            RoundedCornerShape(50.dp)
+                        .padding(horizontal = 16.dp, vertical = 8.dp)
+                        color = if (isActive) Color.White else (if (isLight) Color(0xFF0F172A) else Color.White),
+                        fontSize = 12.sp
+        Spacer(modifier = Modifier.height(12.dp))
+            columns = GridCells.Fixed(3),
+                .weight(1f),
+            horizontalArrangement = Arrangement.spacedBy(10.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp),
+            contentPadding = PaddingValues(bottom = 50.dp)
+            items(9) { fIdx ->
+                val factor = fIdx + 1
+                        .aspectRatio(1.0f)
+                        .shadow(if (isSelected) 8.dp else 4.dp, RoundedCornerShape(16.dp))
+                            1.5.dp,
+                            RoundedCornerShape(16.dp)
+                        containerColor = if (isSelected) themeConfig.primaryColor.copy(alpha = 0.12f) else themeConfig.cardBg
+                    shape = RoundedCornerShape(16.dp)
+                            .padding(8.dp),
+                            color = if (isSelected) themeConfig.primaryColor else (if (isLight) Color(0xFF475569) else Color.LightGray),
+                            fontSize = 12.sp,
+                        Spacer(modifier = Modifier.height(6.dp))
+                            fontSize = 28.sp,
+            .padding(horizontal = 16.dp, vertical = 12.dp)
+            shape = RoundedCornerShape(32.dp),
+                1.dp,
+                        Color.White.copy(alpha = 0.25f),
+                        Color.White.copy(alpha = 0.05f)
+                containerColor = theme.cardBg.copy(alpha = 0.88f)
+                .shadow(24.dp, shape = RoundedCornerShape(32.dp), ambientColor = theme.primaryColor.copy(alpha = 0.2f), spotColor = theme.primaryColor.copy(alpha = 0.4f))
+                    .padding(vertical = 4.dp, horizontal = 4.dp),
+                    val scale by animateFloatAsState(if (active) 1.2f else 1.0f, label = "TabScale")
+                            .padding(vertical = 6.dp)
+                            modifier = Modifier.size(23.dp)
+                        Spacer(modifier = Modifier.height(2.dp))
+                            fontSize = 10.sp
+    if (millis <= 0) return "۰ روز و ۰ ساعت و ۰ دقیقه"
+    val days = (millis / (1000 * 60 * 60 * 24)).toInt()
+    val hours = ((millis / (1000 * 60 * 60)) % 24).toInt()
+    val minutes = ((millis / (1000 * 60)) % 60).toInt()
+        if (char.isDigit()) faDigits[char - '0'] else char
+        if (char.isDigit()) faDigits[char - '0'] else char
+        if (idx != -1) ('0' + idx) else char
+    shape: androidx.compose.ui.graphics.Shape = RoundedCornerShape(24.dp),
+    borderAlpha: Float = 0.25f,
+    bgAlpha: Float = 0.08f,
+            1.dp,
+                    Color.White.copy(alpha = borderAlpha * 0.2f)
+        Column(modifier = Modifier.padding(16.dp)) {
+// ─── REUSABLE 3D PHYSICAL CLICK BUTTON ───
+    shadowColor: Color = containerColor.copy(alpha = 0.45f),
+    shape: androidx.compose.ui.graphics.Shape = RoundedCornerShape(16.dp),
+        targetValue = if (isPressed) 2.dp else 6.dp,
+                .offset(y = 6.dp)
+                .padding(vertical = 12.dp, horizontal = 16.dp),
+    val mainTitleColor = if (isLight) Color(0xFF0F172A) else Color.White
+    val subtitleColor = if (isLight) Color(0xFF475569) else Color.LightGray
+            .padding(24.dp),
+        Spacer(modifier = Modifier.height(24.dp))
+            fontSize = 90.sp,
+            modifier = Modifier.padding(bottom = 12.dp)
+            fontSize = 32.sp,
+            fontSize = 13.sp,
+            modifier = Modifier.padding(top = 4.dp, bottom = 28.dp)
+            bgAlpha = if (isLight) 0.8f else 0.12f,
+            borderAlpha = 0.25f
+                fontSize = 18.sp,
+            Spacer(modifier = Modifier.height(16.dp))
+                    unfocusedBorderColor = if (isLight) Color.Gray.copy(alpha = 0.5f) else Color.White.copy(alpha = 0.3f),
+                shape = RoundedCornerShape(14.dp),
+            Spacer(modifier = Modifier.height(24.dp))
+                    fontSize = 14.sp
+    val rotationAnim = remember { Animatable(0f) }
+    val mainTitleColor = if (isLight) Color(0xFF0F172A) else Color.White
+    val subtitleColor = if (isLight) Color(0xFF475569) else Color.LightGray
+            Pair("۵۰ سکه 🪙", Color(0xFFFF5252)),
+            Pair("۱۰ الماس 💎", Color(0xFF40407A)),
+            Pair("۱۰۰ تجربه ✨", Color(0xFF33D9B2)),
+            Pair("۱۰۰ سکه 🪙", Color(0xFFFF793F)),
+            Pair("۲۵ الماس 💎", Color(0xFF34ACE0)),
+            Pair("۲۰۰ تجربه ✨", Color(0xFF706FD3)),
+            Pair("۲۰۰ سکه 🪙", Color(0xFFFFB142)),
+            Pair("اسپین هدیه 🎁", Color(0xFFB33771))
+    val currentCoins = profile?.coins ?: 0
+    val canSpin = currentCoins >= 5
+                val targetSectorIndex = (0..7).random()
+                val degreesToSpin = 1440f + (360f - (targetSectorIndex * 45f)) - 22.5f
+                rotationAnim.snapTo(0f)
+                    animationSpec = tween(durationMillis = 3500, easing = FastOutSlowInEasing)
+            .padding(24.dp),
+            fontSize = 24.sp,
+            fontSize = 12.sp,
+            modifier = Modifier.padding(top = 4.dp, bottom = 24.dp)
+                .size(310.dp)
+                .padding(14.dp),
+                    .border(8.dp, Color(0xFFFFD700), CircleShape)
+                    .shadow(24.dp, CircleShape, spotColor = Color(0xFFFFA500))
+                val outerRadius = size.minDimension / 2f
+                val sweep = 360f / sectors.size
+                // 1. Draw individual sector card arcs
+                // 2. Draw white dividers between slices for elegant look
+                for (j in 0 until sectors.size) {
+                    val lineAngle = (j * sweep) * (Math.PI / 180f)
+                        color = Color.White.copy(alpha = 0.5f),
+                        strokeWidth = 2.5.dp.toPx()
+                // 3. Draw Rotated Sector reward Text Labels inside the slices
+                    textSize = 10.dp.toPx()
+                    val midAngle = angle + sweep / 2f
+                                center.x + outerRadius - 20.dp.toPx(),
+                                center.y + 4.dp.toPx(),
+                // 4. Draw Glowing flashing carnival light bulb circles on the rim
+                val dotCount = 16
+                val pulse = (System.currentTimeMillis() / 250) % 2 == 0L
+                for (k in 0 until dotCount) {
+                    val angleDeg = k * (360f / dotCount)
+                    val rad = angleDeg * (Math.PI / 180f)
+                    val dotColor = if ((k % 2 == 0) == pulse) Color(0xFFFFD700) else Color(0xFFFFFFFF)
+                        radius = 4.5.dp.toPx(),
+                            x = center.x + (outerRadius - 6.dp.toPx()) * Math.cos(rad).toFloat(),
+                            y = center.y + (outerRadius - 6.dp.toPx()) * Math.sin(rad).toFloat()
+            // 3D Gold Central Start core button (Clickable core to spin the wheel)
+                    .size(85.dp)
+                    .shadow(12.dp, CircleShape)
+                            colors = listOf(Color(0xFFFFF200), Color(0xFFF1C40F), Color(0xFFD68910))
+                    .border(3.dp, Color.White, CircleShape)
+                        fontSize = 11.sp,
+                                color = Color.Black.copy(alpha = 0.5f),
+                                blurRadius = 4f
+                        fontSize = 12.sp,
+                                color = Color.Black.copy(alpha = 0.5f),
+                                blurRadius = 2f
+                    .size(36.dp)
+                    .offset(y = (-18).dp)
+                    moveTo(size.width / 2f, size.height)
+                    lineTo(0f, 0f)
+                    lineTo(size.width, 0f)
+                drawPath(path, color = Color(0xFFFFD700))
+                    style = androidx.compose.ui.graphics.drawscope.Stroke(width = 2.dp.toPx())
+        Spacer(modifier = Modifier.height(28.dp))
+            modifier = Modifier.fillMaxWidth(0.8f),
+        if (currentCoins < 5) {
+                fontSize = 11.sp,
+                modifier = Modifier.padding(top = 8.dp)
+        Spacer(modifier = Modifier.height(80.dp))
+                    .padding(20.dp)
+                    bgAlpha = 0.92f,
+                    borderAlpha = 0.4f
+                    Text("🎉 تبریک قهرمان! 🎉", color = Color(0xFFFFD700), fontSize = 22.sp, fontWeight = FontWeight.Black, modifier = Modifier.align(Alignment.CenterHorizontally))
+                    Spacer(modifier = Modifier.height(12.dp))
+                        fontSize = 14.sp,
+                        fontSize = 24.sp,
+                            .padding(vertical = 14.dp)
+                    Spacer(modifier = Modifier.height(12.dp))
+                        shape = RoundedCornerShape(50.dp),
+                .padding(16.dp)
+                bgAlpha = 0.95f,
+                borderAlpha = 0.6f
+                        .padding(20.dp),
+                        color = Color(0xFF00E5FF), // Neon Cyan accent
+                        fontSize = 24.sp,
+                    Spacer(modifier = Modifier.height(10.dp))
+                        fontSize = 18.sp,
+                    Spacer(modifier = Modifier.height(18.dp))
+                            .size(110.dp)
+                                    colors = listOf(Color(0xFF8B5CF6), Color(0xFFEC4899)) // Beautiful Violet-Pink gradient
+                            .border(4.dp, Color(0xFF00E5FF), CircleShape), // Glowing Cyan border
+                            fontSize = 48.sp,
+                    Spacer(modifier = Modifier.height(18.dp))
+                        color = Color(0xFFE2E8F0),
+                        fontSize = 13.sp,
+                        lineHeight = 20.sp,
+                    Spacer(modifier = Modifier.height(24.dp))
+                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF8B5CF6)), // Vivid Violet CTA button
+                        shape = RoundedCornerShape(50.dp),
+                        modifier = Modifier.fillMaxWidth().height(48.dp)
+                        Text("ادامه بازی با انگیزه بیشتر! 🔥🚀", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                .padding(vertical = 12.dp),
+            shape = RoundedCornerShape(24.dp)
+                    .padding(24.dp)
+                verticalArrangement = Arrangement.spacedBy(14.dp)
+                    fontSize = 17.sp,
+                    color = if (isLight) Color(0xFF0F172A) else Color.White,
+                    fontSize = 19.sp,
+                    color = if (isLight) Color(0xFF475569) else Color.LightGray,
+                    fontSize = 12.sp,
+                    lineHeight = 18.sp
+                            if (isLight) Color(0xFFF1F5F9) else Color.White.copy(alpha = 0.05f),
+                            RoundedCornerShape(12.dp)
+                        .padding(10.dp)
+                                    data = android.net.Uri.parse("tel:09173998335")
+                        color = if (isLight) Color(0xFF475569) else Color.LightGray,
+                        fontSize = 12.sp
+                    Spacer(modifier = Modifier.width(6.dp))
+                        text = "09173998335".toFa(),
+                        color = Color(0xFFFFD32A),
+                        fontSize = 17.sp,
+                val bodyText = if (isLight) Color(0xFF475569) else Color.LightGray
+                val mainTitle = if (isLight) Color(0xFF0F172A) else Color.White
+                        if (licenseExpiryTime > 0L) {
+                            if (remainingTimeMs <= 0L) {
+                            if (remainingTimeMs <= 0L) {
+                    color = if (permanentLicensed || remainingTimeMs > 0L) Color(0xFF10B981).copy(alpha = 0.12f) else themeConfig.primaryColor.copy(alpha = 0.1f),
+                    contentColor = if (permanentLicensed || remainingTimeMs > 0L) Color(0xFF10B981) else themeConfig.primaryColor,
+                    border = BorderStroke(1.dp, if (permanentLicensed || remainingTimeMs > 0L) Color(0xFF10B981).copy(alpha = 0.3f) else themeConfig.primaryColor.copy(alpha = 0.2f)),
+                    shape = RoundedCornerShape(12.dp),
+                        fontSize = 11.sp,
+                        modifier = Modifier.padding(8.dp)
+                    colors = CardDefaults.cardColors(containerColor = themeConfig.primaryColor.copy(alpha = 0.08f)),
+                    border = BorderStroke(1.2.dp, themeConfig.primaryColor.copy(alpha = 0.25f)),
+                    shape = RoundedCornerShape(12.dp)
+                            .padding(12.dp)
+                            Text("📦", fontSize = 16.sp)
+                            Spacer(modifier = Modifier.width(8.dp))
+                                fontSize = 12.sp,
+                        modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                            Triple("sub_1month", "۱ ماهه (۳۰ روزه)", "۱۵,۰۰۰ تومان"),
+                            Triple("sub_3month", "۳ ماهه (۹۰ روزه) 🔥 محبوب", "۲۸,۰۰۰ تومان"),
+                            Triple("sub_6month", "۶ ماهه (۱۸۰ روزه)", "۵۸,۰۰۰ تومان"),
+                            Triple("sub_1year", "۱ ساله (۳۶۵ روزه) 💎 به صرفه", "۸۹,۰۰۰ تومان")
+                                colors = CardDefaults.cardColors(containerColor = if (isLight) Color(0xFFF8FAFC) else Color.White.copy(alpha = 0.04f)),
+                                shape = RoundedCornerShape(12.dp),
+                                border = BorderStroke(1.dp, themeConfig.primaryColor.copy(alpha = 0.15f))
+                                Column(modifier = Modifier.padding(12.dp).fillMaxWidth()) {
+                                                fontSize = 12.sp, 
+                                                fontSize = 11.sp, 
+                                            fontSize = 11.sp,
+                                    Spacer(modifier = Modifier.height(4.dp))
+                                            "sub_1month" -> "🔑 فعال‌سازی آنی اشتراک یک ماهه با اتصال مستقیم به کافه بازار"
+                                            "sub_3month" -> "🔑 دسترسی نامحدود سه ماهه به تمامی ۱۲۰ مرحله بازی + بروزرسانی‌ها"
+                                            "sub_6month" -> "🔑 دسترسی کامل شش ماهه و بدون محدودیت به تمام بخش‌ها"
+                                        fontSize = 10.sp,
+                                        color = themeConfig.primaryColor.copy(alpha = 0.85f),
+                if (!permanentLicensed && remainingTimeMs <= 0L) {
+                        fontSize = 13.sp,
+                        placeholder = { Text("کد فعال‌سازی دریافتی را وارد کنید", fontSize = 11.sp, color = Color.Gray) },
+                            unfocusedBorderColor = if (isLight) Color.LightGray else Color.White.copy(alpha = 0.2f),
+                        shape = RoundedCornerShape(10.dp),
+                            fontSize = 10.sp,
+                        modifier = Modifier.fillMaxWidth().height(44.dp),
+                        shape = RoundedCornerShape(10.dp),
+                        Text("فعالسازی", color = Color.White, fontSize = 12.sp, fontWeight = FontWeight.Bold)
+// ─── PREMIUM LICENSE BLOCK OVERLAY (3-DAY EXPIRY TRIAL FLOW) ───
+    val mainTitle = if (isLight) Color(0xFF0F172A) else Color.White
+    val bodyText = if (isLight) Color(0xFF475569) else Color.LightGray
+                    colors = if (isLight) listOf(Color(0xFFFEF2F2), Color(0xFFFEE2E2)) else listOf(Color(0xFF1E1B4B), Color(0xFF0F172A))
+            .padding(24.dp),
+                .border(1.5.dp, Color(0xFFEF4444).copy(alpha = 0.4f), RoundedCornerShape(24.dp))
+                .shadow(16.dp, RoundedCornerShape(24.dp)),
+            shape = RoundedCornerShape(24.dp),
+                    .padding(24.dp)
+                verticalArrangement = Arrangement.spacedBy(14.dp)
+                    fontSize = 54.sp,
+                    modifier = Modifier.padding(bottom = 2.dp)
+                    color = Color(0xFFEF4444),
+                    fontSize = 18.sp,
+                    fontSize = 12.sp,
+                    lineHeight = 18.sp,
+                    colors = CardDefaults.cardColors(containerColor = if (isLight) Color(0xFFFEF2F2) else Color(0xFFEF4444).copy(alpha = 0.08f)),
+                    shape = RoundedCornerShape(16.dp),
+                    border = BorderStroke(1.dp, Color(0xFFEF4444).copy(alpha = 0.2f))
+                        modifier = Modifier.padding(12.dp),
+                            fontSize = 12.sp
+                        Spacer(modifier = Modifier.height(2.dp))
+                            color = Color(0xFFEF4444),
+                            fontSize = 14.sp
+                        Spacer(modifier = Modifier.height(8.dp))
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                                            data = android.net.Uri.parse("tel:09173998335")
+                                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFEF4444)),
+                                modifier = Modifier.weight(1.2f),
+                                shape = RoundedCornerShape(10.dp)
+                                Text("تماس فوری 📞", color = Color.White, fontSize = 11.sp, fontWeight = FontWeight.Bold)
+                                            data = android.net.Uri.parse("smsto:09173998335")
+                                colors = ButtonDefaults.buttonColors(containerColor = if (isLight) Color(0xFFE2E8F0) else Color.White.copy(alpha = 0.08f)),
+                                modifier = Modifier.weight(1f),
+                                shape = RoundedCornerShape(10.dp)
+                                Text("پیامک 💬", color = if (isLight) Color(0xFF0F172A) else Color.White, fontSize = 11.sp, fontWeight = FontWeight.Bold)
+                    colors = CardDefaults.cardColors(containerColor = themeConfig.primaryColor.copy(alpha = 0.08f)),
+                    border = BorderStroke(1.2.dp, themeConfig.primaryColor.copy(alpha = 0.25f)),
+                    shape = RoundedCornerShape(12.dp)
+                            .padding(12.dp)
+                            Text("📦", fontSize = 16.sp)
+                            Spacer(modifier = Modifier.width(8.dp))
+                                fontSize = 12.sp,
+                        modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                            Triple("sub_1month", "۱ ماهه (۳۰ روزه)", "۱۵,۰۰۰ تومان"),
+                            Triple("sub_3month", "۳ ماهه (۹۰ روزه) 🔥 محبوب", "۲۸,۰۰۰ تومان"),
+                            Triple("sub_6month", "۶ ماهه (۱۸۰ روزه)", "۵۸,۰۰۰ تومان"),
+                            Triple("sub_1year", "۱ ساله (۳۶۵ روزه) 💎 به صرفه", "۸۹,۰۰۰ تومان")
+                                colors = CardDefaults.cardColors(containerColor = if (isLight) Color(0xFFF8FAFC) else Color.White.copy(alpha = 0.04f)),
+                                shape = RoundedCornerShape(12.dp),
+                                border = BorderStroke(1.dp, themeConfig.primaryColor.copy(alpha = 0.15f))
+                                Column(modifier = Modifier.padding(12.dp).fillMaxWidth()) {
+                                                fontSize = 12.sp, 
+                                                fontSize = 11.sp, 
+                                            fontSize = 11.sp,
+                                    Spacer(modifier = Modifier.height(4.dp))
+                                            "sub_1month" -> "🔑 فعال‌سازی آنی اشتراک یک ماهه با اتصال مستقیم به کافه بازار"
+                                            "sub_3month" -> "🔑 دسترسی نامحدود سه ماهه به تمامی ۱۲۰ مرحله بازی + بروزرسانی‌ها"
+                                            "sub_6month" -> "🔑 دسترسی کامل شش ماهه و بدون محدودیت به تمام بخش‌ها"
+                                        fontSize = 10.sp,
+                                        color = themeConfig.primaryColor.copy(alpha = 0.85f),
+                    fontSize = 13.sp,
+                    placeholder = { Text("کد فعال‌سازی دائمی را وارد کنید", fontSize = 11.sp, color = Color.Gray) },
+                        unfocusedBorderColor = if (isLight) Color.LightGray else Color.White.copy(alpha = 0.2f),
+                    shape = RoundedCornerShape(12.dp),
+                        fontSize = 11.sp,
+                            .padding(top = 4.dp)
+                        .height(48.dp),
+                    shape = RoundedCornerShape(12.dp),
+                    Text("فعالسازی", color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Bold)
